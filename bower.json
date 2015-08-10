@@ -1,0 +1,22 @@
+{
+  "name": "json-remapper",
+  "description": "Map Two json object",
+  "version": "0.0.0",
+  "authors": [
+    "Tushar Borole <tushariscoolster@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tushariscoolster/json-remapper"
+  },
+  "homepage": "http://tushariscoolster.github.io/json-remapper/",
+  "license": "LGPL-2.1",
+  "main": "json-remapper.js",
+  "keywords": ["json-remapper,remap, jsonremap,jsonmanipulation"
+  ],
+  "ignore": [
+    "gh-pages",
+    "node_modules",
+    "bower_components"
+  ]
+}
