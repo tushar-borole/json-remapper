@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+    <script src="json-remapper.js"></script>
+    <meta charset=utf-8 />
+    <title>JS Bin</title>
+</head>
+
+<body>
+    <script>
+        (function () {
+           
+
+            var obj1 = {
+                "name": "name1"
+            }
+            var myobj = {
+                obj1: {
+                    key1: 'val1',
+                    key2: 'name'
+                },
+                obj2: {
+                    key1: '2val1',
+                    key2: {
+                        nest1: 'val1',
+                        nest2: 'val2',
+                        nest3: 'val3'
+                    },
+                    key3: {
+                        nest1: 'K3val1',
+                        nest2: 'K3val2',
+                        nest3: [
+                            {
+                                nest1: 'val1',
+                                nest2: 'val2',
+                                nest3: 'val3'
+                            },
+                            {
+                                nest1: 'val1',
+                                nest2: 'val2',
+                                nest3: 'val3'
+                            }
+                      ]
+                    }
+                },
+                obj3: {
+                    key1: 'dddddval1',
+                    key2: 'val2'
+                }
+            };
+            
+             jsonmapper.map(myobj)
+
+          
+
+            //console.log(myobj)
+        })();
+    </script>
+</body>
+
+</html>
