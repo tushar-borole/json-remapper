@@ -15,7 +15,7 @@
            
 
             var obj1 = {
-                "name": "name1"
+                "name": "Tushar"
             }
             var myobj = {
                 obj1: {
@@ -52,7 +52,10 @@
                 }
             };
             
-             jsonmapper.map(myobj)
+             jsonmapper.map(myobj,obj1,function(obj){
+             console.log(obj)
+             
+             })
 
           
 

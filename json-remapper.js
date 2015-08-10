@@ -1,14 +1,15 @@
 var jsonmapper = {
     // get method here
-    map: function (dest, source) {
+    map: function (dest, source,callback) {
 
 
         var path = "";
+        var destObject = jQuery.extend(true, {}, dest);
 
 
-       
 
-        function traverse(key, value) {//traverse to every elemet off array
+
+        function traverse(key, value) { //traverse to every elemet off array
             var savepath = path;
 
             path = path ? (path + "." + key) : key;
@@ -21,19 +22,22 @@ var jsonmapper = {
                 // Recurse into children
                 $.each(value, traverse);
             } else {
-                console.log(path)
+                //console.log(key)
                 //pathArr.push(path)
-                    //console.log(_.get(obj1, 'a[0].b.c', 4));
-                    //_.set(object, 'a[0].b.c', 4);
+                var jsonVal = _.get(source, value, null);
+                _.set(destObject, path, jsonVal);
+
                 //display("Visiting " + path);
 
             }
 
             path = savepath;
         }
-        
-         // Loop the top level
-        $.each(dest, traverse);
+
+        // Loop the top level
+        $.each(destObject, traverse);
+        //console.log(destObject)
+        callback(destObject)
 
 
 
