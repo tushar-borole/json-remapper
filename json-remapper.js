@@ -4,30 +4,27 @@ var jsonmapper = {
 
 
         var path = "";
-        var destObject = jQuery.extend(true, {}, dest);
+        var destObject = _.clone(dest, true);
 
 
 
 
-        function traverse(key, value) { //traverse to every elemet off array
+        function traverse(value, key) { //traverse to every elemet off array
             var savepath = path;
-
+//console.log(value)
             path = path ? (path + "." + key) : key;
 
 
 
-            // ...do what you like with `key` and `value`
-
             if (typeof value === "object") {
                 // Recurse into children
-                $.each(value, traverse);
+                _.forEach(value, traverse);
             } else {
-                //console.log(key)
-                //pathArr.push(path)
+              
                 var jsonVal = _.get(source, value, null);
                 _.set(destObject, path, jsonVal);
 
-                //display("Visiting " + path);
+               
 
             }
 
@@ -35,7 +32,7 @@ var jsonmapper = {
         }
 
         // Loop the top level
-        $.each(destObject, traverse);
+        _.forEach(destObject, traverse);
         //console.log(destObject)
         callback(destObject)
 
