@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Json-remapper : re-map two json object easily">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Json-remapper</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/tushariscoolster/json-remapper">View on GitHub</a>
+
+          <h1 id="project_title">Json-remapper</h1>
+          <h2 id="project_tagline">re-map two json object easily</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/tushariscoolster/json-remapper/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/tushariscoolster/json-remapper/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="json-remapper" class="anchor" href="#json-remapper" aria-hidden="true"><span class="octicon octicon-link"></span></a>json-remapper</h1>
+
+<p>As a frontend developer i use to always fight with backend developer to give json in the specific format. So i decided to create the json remapper, which crete the json from another json ie map json from another json very easily. Check out the documentation for the futher use.</p>
+
+<p><strong>Note</strong> :- This Library is based on lodash, so you need to include lodash js before using this library. Download the library from <a href="www.lodash.com">lodash</a></p>
+
+<hr>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>.</p>
+
+<h4>
+<a id="bower-install" class="anchor" href="#bower-install" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>bower install</strong>
+</h4>
+
+<pre><code>bower install json-remapper
+</code></pre>
+
+<h4>
+<a id="npm-install" class="anchor" href="#npm-install" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>npm install</strong>
+</h4>
+
+<pre><code>npm install json-remapper
+</code></pre>
+
+<h4>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Usage</strong>
+</h4>
+
+<pre><code>      var source = {
+            "name": "Tushar",
+            "name1": "Satish"
+        }
+        var dest = {
+            obj1: {
+                key1: 'name1',
+                key2: 'name'
+            }
+        };
+
+        jsonmapper.map(dest, source, function (obj) {
+            console.log(obj)
+
+        })
+        //output
+        {
+            obj1: {
+                key1: 'Satish',
+                key2: 'Tushar'
+            }
+        };
+</code></pre>
+
+<hr>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>Open an issue first to discuss potential changes/additions. If you have questions with the guide, feel free to leave them as issues in the repository. If you find a typo, create a pull request. The idea is to keep the content up to date and use github’s native feature to help tell the story with issues and PR’s, which are all searchable via google. Why? Because odds are if you have a question, someone else does too! You can learn more here at about how to contribute.</p>
+
+<p><em>By contributing to this repository you are agreeing to make your content available subject to the license of this repository.</em></p>
+
+<h3>
+<a id="process" class="anchor" href="#process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Process</h3>
+
+<pre><code>1. Discuss the changes in a GitHub issue.
+2. Open a Pull Request, reference the issue, and explain the change and why it adds value.
+3. The Pull Request will be evaluated and either merged or declined.
+</code></pre>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Use this guide. Attributions are appreciated._</p>
+
+<h3>
+<a id="copyright" class="anchor" href="#copyright" aria-hidden="true"><span class="octicon octicon-link"></span></a>Copyright</h3>
+
+<p>Copyright (c) 2014-2015 <a href="http://www.tusharborole.com">Tushar Borole</a></p>
+
+<h3>
+<a id="the-mit-license" class="anchor" href="#the-mit-license" aria-hidden="true"><span class="octicon octicon-link"></span></a>(The MIT License)</h3>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Json-remapper maintained by <a href="https://github.com/tushariscoolster">tushariscoolster</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
