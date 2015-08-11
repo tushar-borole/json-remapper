@@ -29,11 +29,11 @@ Getting Started
 
           var source = {
                 "name": "Tushar",
-                "name1": "Satish"
+                "key1":{"name1": "Satish"}
             }
             var dest = {
                 obj1: {
-                    key1: 'name1',
+                    key1: 'key1.name1',
                     key2: 'name'
                 }
             };
