@@ -16,19 +16,30 @@
 
             var source = {
                 "name": "Tushar",
-                "name1": "Satish"
+                "name1": "Satish",
+                "name1": [{
+                    "name": "check1",
+                    "name6": "check1"
+                }, {
+                    "name": "check2",
+                    "name6": "check1"
+                }]
             }
             var dest = {
                 obj1: {
                     key1: 'name1',
-                    key2: 'name'
+                    key2: 'name',
+                    name4: {
+                        "isArray": true,
+                        "keys": {
+
+                        }
+                    }
                 }
             };
 
-            jsonmapper.map(dest, source, function (obj) {
-                console.log(obj)
-
-            })
+           var obj= jsonmapper.map(dest, source)
+           console.log(obj)
 
 
 

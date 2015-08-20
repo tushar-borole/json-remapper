@@ -1,6 +1,6 @@
 var jsonmapper = {
     // get method here
-    map: function (dest, source,callback) {
+    map: function (dest, source, callback) {
 
 
         var path = "";
@@ -11,7 +11,7 @@ var jsonmapper = {
 
         function traverse(value, key) { //traverse to every elemet off array
             var savepath = path;
-//console.log(value)
+            //console.log(value)
             path = path ? (path + "." + key) : key;
 
 
@@ -20,11 +20,11 @@ var jsonmapper = {
                 // Recurse into children
                 _.forEach(value, traverse);
             } else {
-              
+
                 var jsonVal = _.get(source, value, null);
                 _.set(destObject, path, jsonVal);
 
-               
+
 
             }
 
@@ -34,7 +34,13 @@ var jsonmapper = {
         // Loop the top level
         _.forEach(destObject, traverse);
         //console.log(destObject)
-        callback(destObject)
+
+        if (_.isFunction(callback)) {
+            callback(destObject)
+        }else{
+        return destObject
+        }
+
 
 
 

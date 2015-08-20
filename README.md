@@ -42,6 +42,8 @@ Getting Started
                 console.log(obj)
 
             })
+            or
+            var obj=jsonmapper.map(dest, source)
             //output
             {
                 obj1: {
